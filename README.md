@@ -1,5 +1,6 @@
 # Task
 
+[![Build Status](https://travis-ci.org/denderello/task.svg?branch=master)](https://travis-ci.org/denderello/task)
 [![Go Report Card](https://goreportcard.com/badge/denderello/task "Go Report Card")](https://goreportcard.com/report/denderello/task)
 
 `task` is a simple Go library to execute tasks after each other. When one of the
