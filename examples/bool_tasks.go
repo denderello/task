@@ -8,17 +8,17 @@ import (
 )
 
 type BoolTask struct {
-	name               string
+	TaskName           string
 	RunSuccessful      bool
 	RollbackSuccessful bool
 }
 
 func (t BoolTask) Name() string {
-	return t.name
+	return t.TaskName
 }
 
 func (t BoolTask) Run() error {
-	log.Printf("Running task %s", t.name)
+	log.Printf("Running task %s", t.Name())
 	if !t.RunSuccessful {
 		return errors.New("error")
 	}
@@ -26,7 +26,7 @@ func (t BoolTask) Run() error {
 }
 
 func (t BoolTask) Rollback() error {
-	log.Printf("Rolling back task %s", t.name)
+	log.Printf("Rolling back task %s", t.Name())
 	if !t.RollbackSuccessful {
 		return errors.New("error")
 	}
